@@ -18,9 +18,6 @@ soup = BeautifulSoup(resposta.text, "html.parser")
 # Criando o diretório para salvar os arquivos
 os.makedirs("downloads", exist_ok=True)
 
-# Listagem dos arquivos a serem baixados
-arquivosDesejados = {"Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf", "Anexo_II_DUT_2021_RN_465.2021_RN628.2025_RN629.2025.pdf"}
-
 # Função para realizar o download de arquivos.
 def download_arquivo(url_arquivo, caminho_arquivo):
     respostaArquivo = requests.get(url_arquivo, stream=True)
