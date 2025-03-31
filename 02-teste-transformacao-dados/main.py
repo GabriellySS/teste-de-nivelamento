@@ -46,7 +46,7 @@ for arquivo in os.listdir(diretorio_downloads):
         print(f"Arquivo CSV criado: {caminho_csv}")
 
         # Compactando o arquivo CSV em ZIP
-        caminho_zip = os.path.join(diretorio_downloads, f"{arquivo_csv}.zip")
+        caminho_zip = os.path.join(diretorio_downloads, "Teste_gabrielly_santos.zip")
 
         with zipfile.ZipFile(caminho_zip, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=5) as meu_zip:
             meu_zip.write(caminho_csv, arcname=os.path.basename(caminho_csv))
